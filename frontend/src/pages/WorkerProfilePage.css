@@ -1,0 +1,47 @@
+.worker-profile { max-width: 1000px; }
+.back-btn { background: none; color: var(--primary); font-weight: 600; font-size: 0.9rem; margin-bottom: 20px; padding: 0; }
+.booking-success-banner { background: rgba(0,212,170,0.1); border: 1px solid rgba(0,212,170,0.3); border-radius: var(--radius-md); padding: 14px 20px; margin-bottom: 20px; color: #00A882; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+.worker-not-found { text-align: center; padding: 80px; }
+
+.wp-hero { display: grid; grid-template-columns: auto 1fr auto; gap: 28px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 32px; margin-bottom: 24px; box-shadow: var(--shadow-sm); align-items: start; }
+.wp-avatar { width: 100px; height: 100px; border-radius: var(--radius-lg); background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: #fff; font-size: 2.5rem; font-weight: 800; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; box-shadow: var(--shadow-md); }
+.wp-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+.wp-name { font-size: 1.8rem; margin-bottom: 6px; }
+.wp-stars { color: #F59E0B; font-size: 1rem; margin-bottom: 10px; }
+.wp-stars span { font-size: 0.85rem; color: var(--text-muted); font-family: 'Inter', sans-serif; margin-left: 6px; }
+.wp-bio { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px; line-height: 1.6; max-width: 500px; }
+.wp-quick-stats { display: flex; gap: 24px; }
+.wp-stat { display: flex; flex-direction: column; }
+.wp-stat strong { font-size: 1.2rem; font-weight: 700; color: var(--text-primary); font-family: 'Space Grotesk', sans-serif; }
+.wp-stat span { font-size: 0.75rem; color: var(--text-muted); }
+
+.wp-book-box { background: var(--bg-base); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px; min-width: 220px; }
+.wp-price { font-size: 2rem; font-weight: 800; color: var(--primary); font-family: 'Space Grotesk', sans-serif; }
+.wp-price small { font-size: 0.9rem; font-weight: 400; color: var(--text-muted); }
+.wp-est { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 14px; }
+.wp-contact { margin-top: 12px; text-align: center; font-size: 0.88rem; color: var(--primary); font-weight: 600; }
+
+.wp-body { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.wp-skills-section, .wp-reviews-section { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; }
+.wp-skills-section h3, .wp-reviews-section h3 { margin-bottom: 16px; }
+.wp-skills { display: flex; flex-wrap: wrap; gap: 8px; }
+.skill-chip-lg { padding: 8px 16px; background: var(--primary-glow); color: var(--primary); border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 600; }
+.wp-no-reviews { color: var(--text-muted); font-size: 0.88rem; }
+.wp-reviews { display: flex; flex-direction: column; gap: 12px; }
+.wp-review-card { background: var(--bg-base); border-radius: var(--radius-md); padding: 14px; }
+.review-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.review-name { font-size: 0.88rem; font-weight: 600; }
+.review-text { font-size: 0.85rem; color: var(--text-muted); }
+
+/* Modal */
+.modal-overlay { position: fixed; inset: 0; background: rgba(26,16,53,0.5); backdrop-filter: blur(4px); z-index: 500; display: flex; align-items: center; justify-content: center; padding: 20px; }
+.modal-card { background: var(--bg-card); border-radius: var(--radius-xl); padding: 28px; width: 100%; max-width: 480px; box-shadow: var(--shadow-lg); animation: fadeInUp 0.3s ease; }
+.modal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.modal-header h3 { font-size: 1.2rem; }
+.modal-close { width: 32px; height: 32px; border-radius: 50%; background: var(--bg-base); border: 1px solid var(--border); font-size: 0.9rem; display: flex; align-items: center; justify-content: center; }
+.modal-form { display: flex; flex-direction: column; gap: 14px; }
+.modal-price-box { display: flex; justify-content: space-between; background: var(--bg-base); border-radius: var(--radius-md); padding: 14px 18px; }
+.modal-price-box p { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 2px; }
+.modal-price-val { font-size: 1.3rem; font-weight: 700; color: var(--primary); }
+
+@media (max-width: 900px) { .wp-hero { grid-template-columns: 1fr; } .wp-book-box { order: -1; } .wp-body { grid-template-columns: 1fr; } }

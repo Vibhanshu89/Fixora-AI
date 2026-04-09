@@ -1,0 +1,101 @@
+.dashboard { padding: 0; max-width: 1100px; }
+
+.dash-header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  margin-bottom: 32px; gap: 20px; flex-wrap: wrap;
+}
+.dash-greeting { font-size: 0.88rem; color: var(--text-muted); font-weight: 500; margin-bottom: 4px; }
+.dash-title { font-size: 2rem; color: var(--text-primary); margin-bottom: 6px; }
+.dash-title span { color: var(--primary); }
+.dash-sub { font-size: 0.92rem; color: var(--text-muted); }
+
+.dash-stats {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 16px; margin-bottom: 24px;
+}
+.stat-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 20px;
+  display: flex; align-items: center; gap: 14px;
+  box-shadow: var(--shadow-sm); transition: var(--transition);
+}
+.stat-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.stat-icon {
+  width: 48px; height: 48px; border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem; flex-shrink: 0;
+}
+.stat-value { font-size: 1.6rem; font-weight: 700; color: var(--text-primary); font-family: 'Space Grotesk', sans-serif; }
+.stat-label { font-size: 0.8rem; color: var(--text-muted); }
+
+.dash-ai-banner {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  border-radius: var(--radius-xl); padding: 24px 28px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 20px; margin-bottom: 28px; box-shadow: var(--shadow-md);
+}
+.dash-ai-banner-left { display: flex; align-items: center; gap: 16px; }
+.dash-ai-icon { font-size: 2.5rem; }
+.dash-ai-banner h3 { color: #fff; font-size: 1.1rem; margin-bottom: 4px; }
+.dash-ai-banner p { color: rgba(255,255,255,0.8); font-size: 0.88rem; }
+.dash-ai-banner .btn-primary {
+  background: #fff; color: var(--primary); white-space: nowrap; flex-shrink: 0;
+}
+
+.dash-section { margin-bottom: 28px; }
+.dash-section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+.dash-section-title { font-size: 1.05rem; font-weight: 700; color: var(--text-primary); }
+.dash-see-all { font-size: 0.85rem; color: var(--primary); font-weight: 600; }
+
+.quick-actions {
+  display: flex; gap: 12px; flex-wrap: wrap;
+}
+.quick-action-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  padding: 16px 20px; background: var(--bg-card);
+  border: 1px solid var(--border); border-radius: var(--radius-lg);
+  transition: var(--transition); min-width: 80px;
+}
+.quick-action-btn:hover {
+  border-color: var(--primary); background: var(--primary-glow);
+  transform: translateY(-2px);
+}
+.qa-icon { font-size: 1.6rem; }
+.qa-label { font-size: 0.78rem; font-weight: 600; color: var(--text-secondary); }
+
+.bookings-list { display: flex; flex-direction: column; gap: 12px; }
+.booking-item {
+  display: flex; align-items: center; gap: 14px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 16px 20px;
+  transition: var(--transition);
+}
+.booking-item:hover { box-shadow: var(--shadow-sm); }
+.booking-item-icon {
+  width: 44px; height: 44px; background: var(--primary-glow);
+  border-radius: var(--radius-md); display: flex; align-items: center;
+  justify-content: center; font-size: 1.2rem; flex-shrink: 0;
+}
+.booking-item-info { flex: 1; min-width: 0; }
+.booking-item-service { font-weight: 600; color: var(--text-primary); font-size: 0.95rem; }
+.booking-item-worker, .booking-item-date { font-size: 0.8rem; color: var(--text-muted); margin-top: 3px; }
+.booking-item-right { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+.booking-item-price { font-weight: 700; color: var(--primary); font-size: 0.95rem; }
+.booking-item-ref { font-size: 0.75rem; color: var(--text-muted); }
+
+.dash-empty {
+  text-align: center; padding: 48px 20px; color: var(--text-muted);
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); font-size: 2rem;
+}
+.dash-empty p { font-size: 0.9rem; margin-top: 10px; }
+.dash-empty a { color: var(--primary); font-weight: 600; }
+
+@media (max-width: 900px) {
+  .dash-stats { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .dash-stats { grid-template-columns: 1fr 1fr; }
+  .dash-ai-banner { flex-direction: column; text-align: center; }
+  .dash-ai-banner-left { flex-direction: column; }
+}

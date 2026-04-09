@@ -1,0 +1,73 @@
+.agent-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.agent-panel-header {
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, rgba(91, 46, 255, 0.04) 0%, rgba(255, 255, 255, 1) 100%);
+}
+.agent-panel-icon { font-size: 1.6rem; }
+.agent-panel-title { font-size: 0.95rem; font-weight: 700; color: var(--text-primary); }
+.agent-panel-sub { font-size: 0.78rem; color: var(--text-muted); }
+.agent-thinking-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--accent); margin-left: auto;
+  animation: pulse 1.2s ease infinite;
+}
+
+.agent-steps {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.agent-empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.8rem;
+}
+.agent-empty p { font-size: 0.88rem; }
+
+.agent-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  background: var(--bg-base);
+  border: 1px solid var(--border);
+  animation: fadeInUp 0.3s ease;
+}
+.agent-step.thinking { border-color: var(--primary-light); background: var(--primary-glow); }
+.agent-step.result { border-color: rgba(0, 212, 170, 0.3); background: rgba(0, 212, 170, 0.05); }
+
+.agent-step-icon { font-size: 1.2rem; margin-top: 2px; flex-shrink: 0; }
+.agent-step-label { font-size: 0.88rem; font-weight: 600; color: var(--text-primary); }
+.agent-step-detail { font-size: 0.80rem; color: var(--text-muted); margin-top: 2px; }
+
+.agent-dots { display: flex; gap: 4px; margin-top: 6px; }
+.agent-dots span {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--primary); animation: blink 1.2s ease infinite;
+}
+.agent-dots span:nth-child(2) { animation-delay: 0.3s; }
+.agent-dots span:nth-child(3) { animation-delay: 0.6s; }
