@@ -50,7 +50,8 @@ export default function AuthPage() {
   };
 
   const handleGoogle = () => {
-    window.location.href = '/api/auth/google';
+    const API_BASE_URL = import.meta.env.VITE_API_URL || '';
+    window.location.href = `${API_BASE_URL}/api/auth/google`;
   };
 
   return (
